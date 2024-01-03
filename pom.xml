@@ -9,6 +9,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>common-app</module>
         <module>conversion-service</module>
     </modules>
 
