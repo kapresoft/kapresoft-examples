@@ -11,20 +11,21 @@
 	</parent>
 
 	<groupId>com.kapresoft.articles</groupId>
-	<artifactId>spring-boot-app</artifactId>
+	<artifactId>spring-boot-api</artifactId>
 	<version>1.0.0</version>
-	<name>spring-boot-app</name>
-	<description>Spring Boot App - Common Examples for Articles</description>
+	<name>spring-boot-api</name>
+	<description>Spring Boot Web - API Examples for KapreSoft Articles</description>
 
 	<properties>
-		<java.version>${java.version}</java.version>
+		<java.version>17</java.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
+			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
