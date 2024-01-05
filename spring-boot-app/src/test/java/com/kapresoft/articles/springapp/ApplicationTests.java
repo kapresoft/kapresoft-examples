@@ -1,10 +1,10 @@
-package com.kapresoft.articles.commonapp;
+package com.kapresoft.articles.springapp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CommonAppApplicationTests {
+class ApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -17,7 +17,7 @@
 	<description>Conversion Service Examples</description>
 
 	<properties>
-		<java.version>${java.version}</java.version>
+		<java.version>17</java.version>
 	</properties>
 
 	<dependencies>
@@ -46,8 +46,8 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>com.kapresoft.articles</groupId>
-				<artifactId>kapresoft-articles-parent</artifactId>
+				<groupId>com.kapresoft.articles.pom</groupId>
+				<artifactId>common-dependencies</artifactId>
 				<version>1.0.0</version>
 				<type>pom</type>
 				<scope>import</scope>

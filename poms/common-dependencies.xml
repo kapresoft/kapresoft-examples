@@ -3,17 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.kapresoft.articles</groupId>
-    <artifactId>kapresoft-articles-parent</artifactId>
+    <groupId>com.kapresoft.articles.pom</groupId>
+    <artifactId>common-dependencies</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
-
-    <modules>
-        <module>poms</module>
-        <module>spring-boot-app</module>
-        <module>spring-boot-api</module>
-        <module>conversion-service</module>
-    </modules>
 
     <properties>
         <annotations.version>3.0.1</annotations.version>
@@ -29,5 +22,12 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <!--
+    <build>
+        <pluginManagement>
+        </pluginManagement>
+    </build>
+    -->
 
 </project>

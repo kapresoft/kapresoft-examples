@@ -1,4 +1,4 @@
-package com.kapresoft.articles.commonapp;
+package com.kapresoft.articles.springapp;
 
 import org.junit.jupiter.api.Test;
 
