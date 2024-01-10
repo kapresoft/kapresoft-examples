@@ -6,6 +6,7 @@
         <groupId>com.kapresoft.articles</groupId>
         <artifactId>common-dependencies</artifactId>
         <version>1.0.0</version>
+        <relativePath/>
     </parent>
 
     <artifactId>java-app-starter-parent</artifactId>
