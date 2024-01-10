@@ -4,21 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.kapresoft.articles</groupId>
-    <artifactId>kapresoft-articles-parent</artifactId>
+    <artifactId>common-dependencies-spring</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
-
-    <scm>
-        <connection>git@github.com:kapresoft/kapresoft-examples.git</connection>
-        <developerConnection>git@github.com:kapresoft/kapresoft-examples.git</developerConnection>
-        <url>https://github.com/kapresoft/kapresoft-examples/</url>
-    </scm>
-
-    <modules>
-        <module>spring-boot-app</module>
-        <module>spring-boot-api</module>
-        <module>conversion-service</module>
-    </modules>
+    <description>Common POM for Spring or Spring Boot Projects</description>
 
     <properties>
         <annotations.version>3.0.1</annotations.version>
@@ -34,5 +23,12 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <!--
+    <build>
+        <pluginManagement>
+        </pluginManagement>
+    </build>
+    -->
 
 </project>
