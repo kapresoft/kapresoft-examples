@@ -5,12 +5,10 @@ import com.fasterxml.jackson.databind.JsonNode;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.MediaType;
-import org.springframework.test.context.junit.jupiter.web.SpringJUnitWebConfig;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@SpringJUnitWebConfig
 class UserHandlerWebClientTest {
 
     private WebTestClient webTestClient;
@@ -49,10 +47,10 @@ class UserHandlerWebClientTest {
                 .expectHeader().contentType(MediaType.APPLICATION_JSON)
                 .expectBody()
                 .jsonPath("$.link").isEqualTo("/fn/user/1")
-                .jsonPath("$.results.id").isEqualTo(1)
-                .jsonPath("$.results.first").isEqualTo("Steve")
-
-        ;
+                .jsonPath("$.id").isEqualTo(1)
+                .jsonPath("$.first").isEqualTo("Steve")
+                .jsonPath("$.last").isEqualTo("Rogers")
+                .jsonPath("$.email").isEqualTo("steve.rogers@gmail.com");
     }
 
     @Test
