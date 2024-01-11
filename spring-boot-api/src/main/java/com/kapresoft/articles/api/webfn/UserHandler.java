@@ -15,7 +15,8 @@ import static org.springframework.web.servlet.function.RequestPredicates.accept;
 @Component
 public class UserHandler {
 
-    record ResponseObject(String link, Object results) { }
+    record CollectionResponseObject(String link, Object results) { }
+
     private final UserService userService;
 
     public UserHandler(UserService userService) {
@@ -33,9 +34,10 @@ public class UserHandler {
         Long userId = Long.parseLong(request.pathVariable("id"));
         String selfLink = UriComponentsBuilder.fromPath(request.path())
                 .build().toUriString();
+        UserRepresentation user = UserRepresentation.builder().link(selfLink).user(userService.getUserById(userId)).build();
         return ServerResponse.ok()
                 .header("Link", selfLink)
-                .body(new ResponseObject(selfLink, userService.getUserById(userId)));
+                .body(user);
 
     }
 
@@ -44,7 +46,7 @@ public class UserHandler {
                 .build().toUriString();
         return ServerResponse.ok()
                 .header("Link", selfLink)
-                .body(new ResponseObject(selfLink, userService.allUsers()));
+                .body(new CollectionResponseObject(selfLink, userService.allUsers()));
     }
 
 

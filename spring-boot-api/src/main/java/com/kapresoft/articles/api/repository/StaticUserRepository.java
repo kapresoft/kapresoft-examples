@@ -17,12 +17,14 @@ public interface StaticUserRepository {
         return User.builder().id(1L).email("steve.rogers@gmail.com")
                 .first("Steve")
                 .last("Rogers")
+                .active(true)
                 .build();
     }
     default User lindaCarter() {
         return User.builder().id(2L).email("linda.carter@gmail.com")
                 .first("Linda")
                 .last("Carter")
+                .active(true)
                 .build();
     }
 }
