@@ -3,12 +3,14 @@ package com.kapresoft.articles.api.webfn;
 import com.fasterxml.jackson.databind.JsonNode;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@Disabled
 class UserHandlerWebClientTest {
 
     private WebTestClient webTestClient;

@@ -10,9 +10,13 @@
     <description>Common POM for Plain Java Projects</description>
 
     <properties>
-        <junit-jupiter.version>5.10.1</junit-jupiter.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
         <annotations.version>3.0.1</annotations.version>
         <assertj-core.version>3.25.1</assertj-core.version>
+        <junit-jupiter.version>5.10.1</junit-jupiter.version>
+        <lombok.version>1.18.30</lombok.version>
+        <maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
     </properties>
 
     <!-- SEE: ~/.m2/repository/org/springframework/boot/spring-boot-dependencies/3.2.1/spring-boot-dependencies-3.2.1.pom -->
@@ -33,14 +37,23 @@
                 <artifactId>assertj-core</artifactId>
                 <version>${assertj-core.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
-    <!--
     <build>
         <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven-compiler-plugin.version}</version>
+                </plugin>
+            </plugins>
         </pluginManagement>
     </build>
-    -->
 
 </project>
