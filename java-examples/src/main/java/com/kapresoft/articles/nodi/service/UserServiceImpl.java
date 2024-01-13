@@ -14,8 +14,10 @@ public class UserServiceImpl implements UserService, ApplicationContextSupport {
     public User registerUser(User user) throws UserExistsException {
         userDao().createUser(user);
         String email = user.getEmail();
-        return userDao().findUserByEmail(email)
+        var createdUser = userDao().findUserByEmail(email)
                 .orElseThrow(() -> new CreateUserFailedException(email));
+        emailService().confirmEmailAddress(createdUser);
+        return createdUser;
     }
 
     @Override

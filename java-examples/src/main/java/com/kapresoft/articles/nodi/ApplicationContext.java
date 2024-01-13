@@ -14,22 +14,19 @@ public class ApplicationContext {
     private static class Holder {
         private static final ApplicationContext CTX = new ApplicationContext();
         private static final UserService USER_SERVICE = new UserServiceImpl();
+        private static final EmailService EMAIL_SERVICE = new EmailServiceImpl();
     }
 
     public static ApplicationContext getInstance() {
         return Holder.CTX;
     }
 
-    // Singleton
     UserService userService() {
         return Holder.USER_SERVICE;
     }
 
 
-    // Prototype
-    EmailService emailService() {
-        return new EmailServiceImpl();
-    }
+    EmailService emailService() {return Holder.EMAIL_SERVICE; }
 
     // Prototype
     UserDAO userDAO() {
