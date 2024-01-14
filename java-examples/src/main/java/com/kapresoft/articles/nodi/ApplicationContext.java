@@ -26,14 +26,16 @@ public class ApplicationContext {
     }
 
 
-    public EmailService emailService() {return Holder.EMAIL_SERVICE; }
+    public EmailService emailService() {
+        return Holder.EMAIL_SERVICE;
+    }
 
-    // Prototype
+    // Prototype for demonstration purpose
     public UserDAO userDAO() {
         return new UserDAOImpl();
     }
 
-    // Prototype
+    // Prototype for demonstration purpose
     public EmailSender emailSender() {
         return new EmailSenderImpl();
     }
