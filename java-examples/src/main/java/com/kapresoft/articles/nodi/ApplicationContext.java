@@ -21,20 +21,20 @@ public class ApplicationContext {
         return Holder.CTX;
     }
 
-    UserService userService() {
+    public UserService userService() {
         return Holder.USER_SERVICE;
     }
 
 
-    EmailService emailService() {return Holder.EMAIL_SERVICE; }
+    public EmailService emailService() {return Holder.EMAIL_SERVICE; }
 
     // Prototype
-    UserDAO userDAO() {
+    public UserDAO userDAO() {
         return new UserDAOImpl();
     }
 
     // Prototype
-    EmailSender emailSender() {
+    public EmailSender emailSender() {
         return new EmailSenderImpl();
     }
 
