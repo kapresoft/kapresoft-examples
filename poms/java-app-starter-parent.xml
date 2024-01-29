@@ -15,6 +15,7 @@
     <description>Plain Java Starter</description>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <annotations.version>3.0.1</annotations.version>
     </properties>
 
